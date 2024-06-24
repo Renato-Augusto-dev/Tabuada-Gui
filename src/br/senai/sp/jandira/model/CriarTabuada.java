@@ -1,9 +1,12 @@
 package br.senai.sp.jandira.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CriarTabuada {
     private int numero1 = 0;
     private int multiplicando = 0;
-
+    private int resultado = 0;
 
     public int getNumero1() {
         return numero1;
@@ -20,15 +23,20 @@ public class CriarTabuada {
     public void setMultiplicando(int multiplicando) {
         this.multiplicando = multiplicando;
     }
+    //Criando um metodo para criar a tabuada
+    public List<String> gerarTabuada(){
 
-    public void gerarTabuada(int multiplicando, int numero1){
-        while(numero1 <= multiplicando){
-            int resultado = numero1 * multiplicando;
-            System.out.printf("%s X %s = %s \n", numero1, multiplicando,resultado);
+        //Criando um array chamado linhasTabuada
+        List<String> linhasTabuada = new ArrayList<>();
 
+        //Fazendo a tabuada
+        while(this.numero1 <= this.multiplicando){
+            int resultado = this.numero1 * this.multiplicando;
+
+            linhasTabuada.add(multiplicando + "x" + numero1 + "=" + resultado);
             numero1++;
         }
-
+        return linhasTabuada;
     }
 
 }
