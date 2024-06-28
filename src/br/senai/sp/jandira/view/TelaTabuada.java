@@ -15,9 +15,9 @@ public class TelaTabuada {
     private JPanel painelTitulo = new JPanel();
     private JPanel linhaPreta = new JPanel();
     private JLabel labelTitulo = new JLabel("Tabuada Do Reinatinho");
-    private JLabel labelNumero = new JLabel("Multiplicando");
+    private JLabel labelNumero = new JLabel("Multiplicando Minino");
     private JTextField txtNumero = new JTextField();
-    private JLabel labelMultiplicado = new JLabel("Numero");
+    private JLabel labelMultiplicado = new JLabel("Multiplicando");
     private JTextField txtMultiplicado = new JTextField();
     private JLabel labelResultado = new JLabel("");
     private JButton btnCalcular = new JButton("Calcular");
@@ -52,14 +52,13 @@ public class TelaTabuada {
         labelTitulo.setFont(new Font("Arial", Font.BOLD, 24));
 
 
-        labelNumero.setBounds(10,100,100,100);
+        labelNumero.setBounds(10,100,300,100);
         labelNumero.setFont(new Font("Arial", Font.BOLD, 24));
         txtNumero.setBounds(10,170,250,25);
         txtNumero.setFont(new Font("Arial",Font.BOLD,14));
 
         labelMultiplicado.setBounds(10,200,200,100);
         labelMultiplicado.setFont(new Font("Arial",Font.BOLD,24));
-
         txtMultiplicado.setBounds(10,270,200,25);
         txtMultiplicado.setFont(new Font("Arial",Font.BOLD,14));
 
@@ -111,12 +110,12 @@ public class TelaTabuada {
         txtNumero.requestFocus();
     }
     private void calcular(){
-        int mutlipicando = Integer.parseInt(txtMultiplicado.getText());
-        int numero01 = Integer.parseInt(txtNumero.getText());
+        int mutliplicando = Integer.parseInt(txtMultiplicado.getText());
+        int mutliplicadorMinimo = Integer.parseInt(txtNumero.getText());
 
         int contador = 0;
-        criarTabuada.setMultiplicando(mutlipicando);
-        criarTabuada.setNumero1(numero01);
+        criarTabuada.setMultiplicando(mutliplicando);
+        criarTabuada.setMultiplicadorMinimo(mutliplicadorMinimo);
 
         //Criando um list para guarda os resultados
         List<String> listaTabuada = criarTabuada.gerarTabuada();

@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CriarTabuada {
-    private int numero1 = 0;
+    private int multiplicadorMinimo = 0;
     private int multiplicando = 0;
     private int resultado = 0;
 
-    public int getNumero1() {
-        return numero1;
+    public int getMultiplicadorMinimo() {
+        return multiplicadorMinimo;
     }
 
-    public void setNumero1(int numero1) {
-        this.numero1 = numero1;
+    public void setMultiplicadorMinimo(int multiplicadorMinimo) {
+        this.multiplicadorMinimo = multiplicadorMinimo;
     }
 
     public int getMultiplicando() {
@@ -30,11 +30,11 @@ public class CriarTabuada {
         List<String> linhasTabuada = new ArrayList<>();
 
         //Fazendo a tabuada
-        while(this.numero1 <= this.multiplicando){
-            int resultado = this.numero1 * this.multiplicando;
+        while(this.multiplicadorMinimo <= this.multiplicando){
+            int resultado = this.multiplicando * this.multiplicadorMinimo;
 
-            linhasTabuada.add(multiplicando + "x" + numero1 + "=" + resultado);
-            numero1++;
+            linhasTabuada.add(multiplicando + "x" + multiplicadorMinimo + "=" + resultado);
+            multiplicadorMinimo++;
         }
         return linhasTabuada;
     }
